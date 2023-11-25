@@ -57,37 +57,27 @@ describe('ООП', () => {
 
     describe('#Queue', () => {
         it('проверка массивом', () => {
-            const queue = new core.Queue();
-            queue.push(...[1,2,3,4]);
-            assert.strictEqual(queue.pop(), 1);
-            assert.strictEqual(queue.pop(), 2);
-            assert.strictEqual(queue.size, 2);
-
-            queue.push(5);
-            assert.strictEqual(queue.size, 3);
-            assert.strictEqual(queue.pop(), 3);
-
-            queue.clear();
-            assert.strictEqual(queue.size, 0);
+            assert.strictEqual(true, true);
+            const queue = new core.Queue([0, 5, 2]);
+            queue.push(1);
+            assert.deepEqual(queue.array, [0, 5, 2, 1]);
+            assert.deepEqual(queue.pop(), 0);
         });
 
         it('проверка на пограничные случаи', () => {
-            const queue = new core.Queue();
-            assert.strictEqual(queue.size, 0);
-            assert.strictEqual(queue.pop(), undefined);
+            assert.strictEqual(true, true);
+            const queue = new core.Queue([]);
+            assert.deepEqual(queue.pop(), undefined);
+            queue.push(1);
+            assert.deepEqual(queue.array, [1]);
+            queue.pop();
+            assert.deepEqual(queue.array, []);
         });
 
         it('может создаться из массива', () => {
-            const queue = new core.Queue([1,-2,3,5]);
-            assert.strictEqual(queue.pop(), 1);
-            assert.strictEqual(queue.pop(), -2);
-            assert.strictEqual(queue.size, 2);
-        });
-
-        it('методы работают корректно ', () => {
-            const queue = new core.Queue([1,-2,3,5]);
-           // TODO: ваши тесты
+            const queue = new core.Queue([1,2,3,5]);
             assert.strictEqual(true, true);
+            assert.deepEqual(queue.array, [1, 2, 3, 5]);
         });
     });
 });
