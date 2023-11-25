@@ -42,7 +42,13 @@ function factorial(n) {
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) {
-    while (n > 0) {
+    if (n === 0) {
+        return false;
+    }
+    if (n === 1) {
+        return true;
+    }
+    while (n > 1) {
         if (n % 2 === 1) {
             return false;
         }
@@ -73,15 +79,17 @@ function fibonacci(n) {
  * console.log(sumFn(5)) - 15
  * console.log(sumFn(3)) - 18
  */
-function getOperationFn(initialValue, operatorFn = 0) {
-    return function(newValue) {
-        if (operatorFn === 0) {
+function getOperationFn(initialValue, operatorFn) {
+    if (arguments.length === 1 && isFinite(initialValue)) {
+        return function (newValue) {
             return initialValue;
-        }
-        else {
-            let f = operatorFn;
-            return f(initialValue, newValue);
-        }
+        };
+    }
+    if (arguments.length === 2 && isFinite(initialValue) && typeof operatorFn === 'function') {
+        return function (newValue) {
+            initialValue = operatorFn(initialValue, newValue);
+            return initialValue;
+        };
     }
 }
 
@@ -123,26 +131,20 @@ function sequence(start = 0, step = 1) {
  * deepEqual({arr: [22, 33], text: 'text'}, {arr: [22, 3], text: 'text2'}) // false
  */
 function deepEqual(firstObject, secondObject) {
-    if (firstObject === secondObject) {
-        return true;
-    }
- 
-    if (firstObject == null || typeof(firstObject) != "object" ||
-        secondObject == null || typeof(secondObject) != "object")
-    {
-        return false;
-    }
-    let propertiesInA = 0, propertiesInB = 0;
-    for (let property in firstObject) {
-        propertiesInA += 1;
-    }
-    for (let property in secondObject) {
-        propertiesInB += 1;
-        if (!(property in firstObject) || !deepEqual(firstObject[property], secondObject[property])) {
-            return false;        
+    if (Object.is(firstObject, secondObject)) return true;
+    if((typeof firstObject != "object") || (typeof secondObject != "object") || (firstObject === null) || (secondObject === null)) return firstObject === secondObject;
+    else {
+      if (Object.keys(firstObject).length != Object.keys(secondObject).length) return false;
+      for (let key in firstObject) {
+        if (secondObject.hasOwnProperty(key)) {
+          if (!deepEqual(firstObject[key], secondObject[key]))
+            return false;
         }
-    }        
-    return propertiesInA == propertiesInB;
+        else
+          return false;
+      }
+      return true;
+    }
 }
 
 module.exports = {
