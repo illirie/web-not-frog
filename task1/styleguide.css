@@ -1,0 +1,27 @@
+:root {
+    --daytexttext-01: rgba(0, 0, 0, 0.8);
+    --daytexttext-02: rgba(0, 0, 0, 0.54);
+    --daytextlink: rgba(51, 111, 238, 1);
+    --day-text-text-01: rgba(0, 0, 0, 0.8);
+    --daybasebase-02: rgba(246, 247, 248, 1);
+    --daybasebase-01: rgba(255, 255, 255, 1);
+    --day-base-base-08: rgba(51, 51, 51, 1);
+    --daybaseelevation-01: rgba(255, 255, 255, 1);
+    --day-base-primary: rgba(255, 221, 45, 1);
+    --daytexttext-positive: rgba(0, 161, 39, 1);
+    --daybasebase-04: rgba(221, 223, 224, 1);
+    --desktop-15-body-m-font-family: "NeueHaas Unica W1G-Regular", Helvetica;
+    --desktop-15-body-m-font-weight: 400;
+    --desktop-15-body-m-font-size: 15px;
+    --desktop-15-body-m-letter-spacing: 0px;
+    --desktop-15-body-m-line-height: 24px;
+    --desktop-15-body-m-font-style: normal;
+    --desktop-body-s-font-family: "NeueHaas Unica W1G-Regular", Helvetica;
+    --desktop-body-s-font-weight: 400;
+    --desktop-body-s-font-size: 13px;
+    --desktop-body-s-letter-spacing: 0px;
+    --desktop-body-s-line-height: 20px;
+    --desktop-body-s-font-style: normal;
+    --shadow-default: 0px 4px 24px 0px rgba(0, 0, 0, 0.12);
+  }
+  
