@@ -12,12 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
       rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Карточки</title>
   </head>
 
   <body>
     <header class="header">
-      <p class="header__text">Циуля Карина 6409</p>
+      <p id="header__text" class="header__text"></p>
       <button id="setup-button" class="header__button" type="button">Засетапить начальные значения</button>
     </header>
 
@@ -41,9 +40,55 @@
       <div class="list-block">
         <p class="list-block__title">Витрина карточек</p>
         <div class="list-block__list">
-
+          <div class="list-block__card skeleton">
+            <div class="list-block__card-top">
+              <a class="list-block__card-red" href="">Edit</a>
+              <div class="list-block__card-id grey__id"> </div>
+              <div class="list-block__card-red">X</div>
+            </div>
+            <div class="list-block__card-main">
+              <div class="list-block__card-img grey"></div>
+              <div class="list-block__card-text">
+                <div class="list-block__card-name grey__name"></div>
+                <div class="list-block__card-provider grey__provider"></div>
+              </div>
+            </div>
+            <div class="list-block__card-description grey__description"></div>
+          </div>
+          <div class="list-block__card skeleton">
+            <div class="list-block__card-top">
+              <a class="list-block__card-red" href="">Edit</a>
+              <div class="list-block__card-id grey__id"> </div>
+              <div class="list-block__card-red">X</div>
+            </div>
+            <div class="list-block__card-main">
+              <div class="list-block__card-img grey"></div>
+              <div class="list-block__card-text">
+                <div class="list-block__card-name grey__name"></div>
+                <div class="list-block__card-provider grey__provider"></div>
+              </div>
+            </div>
+            <div class="list-block__card-description grey__description"></div>
+          </div>
+          <div class="list-block__card skeleton">
+            <div class="list-block__card-top">
+              <a class="list-block__card-red" href="">Edit</a>
+              <div class="list-block__card-id grey__id"> </div>
+              <div class="list-block__card-red">X</div>
+            </div>
+            <div class="list-block__card-main">
+              <div class="list-block__card-img grey"></div>
+              <div class="list-block__card-text">
+                <div class="list-block__card-name grey__name"></div>
+                <div class="list-block__card-provider grey__provider"></div>
+              </div>
+            </div>
+            <div class="list-block__card-description grey__description"></div>
+          </div>
         </div>
       </div>
+
+      <div id="loader" class="preloader-5 invisible"></div>
     </main>
     
     <script defer type="module" src="./main.js"></script>
