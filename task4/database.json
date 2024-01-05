@@ -1,0 +1,40 @@
+{
+  "cards": [
+    {
+      "id": "05be344c93e",
+      "name": "Звуковая отвертка",
+      "url": "https://static.insales-cdn.com/images/products/1/6816/42646176/%D0%97%D0%B2%D1%83%D0%BA%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BE%D1%82%D0%B2%D0%B5%D1%80%D1%82%D0%BA%D0%B0_12-%D0%B3%D0%BE_%D0%94%D0%BE%D0%BA%D1%82%D0%BE%D1%80%D0%B0_%D0%9A%D1%82%D0%BE_1.jpg",
+      "description": "отлично жужжит",
+      "code": 1,
+      "provider": "Галлифрей"
+    },
+    {
+      "id": "04d85312de8d",
+      "name": "Крабсбургер",
+      "url": "https://avatars.dzeninfra.ru/get-zen_doc/1945976/pub_5cfe4d061b104c00afefbcb1_5cfe547885b5e500afe2ecee/scale_1200",
+      "description": "точно вкусный",
+      "code": 2,
+      "provider": "Красти Крабс"
+    },
+    {
+      "id": "31a6b1101277e",
+      "name": "Чужой",
+      "url": "https://horrorzone.ru/uploads/_gallery/75074/alien00.jpg",
+      "description": "...кто решил продавать ксеноморфов?",
+      "code": 3,
+      "provider": "???"
+    },
+    {
+      "id": "bc11e254d39f3",
+      "name": "Шепот",
+      "url": "https://i.playground.ru/p/yHTGNxQDRaYQFYkP5dDeeA.jpeg",
+      "description": "лишь четыре выстрела, зато какие",
+      "code": 4,
+      "provider": "Иония"
+    }
+  ],
+  "profile": {
+    "name": "Циуля Карина",
+    "group": "6409"
+  }
+}
